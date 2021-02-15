@@ -13,7 +13,7 @@ import wget
 #########################################################
 
 total_src = set()
-variavel_teste = 00
+variavel_teste = 11
 
 # Finalizado
 def ajuda():
