@@ -101,7 +101,7 @@ def goProfile():
     time.sleep(3)
     driver.find_element_by_tag_name("html").send_keys(Keys.END)
     # Finish
-    print("Indo para o lobby em 5 segundos...")
+    print("Indo para o lobby em 2 segundos...")
     time.sleep(2)
     lobby()
 
@@ -118,7 +118,7 @@ def baixaImagens():
             time.sleep(download_speed)  # Velocidade que baixa os arquivos
             wget.download(
                 s,
-                f"/Users/fmore/Documents/Bot1/downloaded/loot{index}.jpg",
+                f"/Users/fmore/Documents/Bot1/downloaded/loot{index}.jpg",  # Coloque seu path
             )
             index += 1
             if index >= quantidade_posts:
@@ -128,7 +128,7 @@ def baixaImagens():
         lobby()
 
     # Finish
-    print("Indo para o lobby em 5 segundos...")
+    print("Indo para o lobby em 2 segundos...")
     time.sleep(2)
     lobby()
 
@@ -142,7 +142,7 @@ nome = str(input("Seu Usuario: "))
 senha = str(input("Sua Senha: "))
 options = Options()
 options.binary_location = (
-    r"S:\Programs\Browsers\Mozilla Firefox\firefox.exe"  # Corrigir dps
+    r"S:\Programs\Browsers\Mozilla Firefox\firefox.exe"  # Coloque seu path
 )
 driver = webdriver.Firefox(options=options)  # firefox_options=
 driver.get("https://www.instagram.com")
