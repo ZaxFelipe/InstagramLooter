@@ -12,8 +12,8 @@ import wget
 #              RODANDO VERSÃO BUILD TESTE
 #########################################################
 
+# Variavel principal
 total_src = set()
-variavel_mudança = 23
 
 # Finalizado
 def ajuda():
@@ -72,8 +72,6 @@ def lobby():
         baixaImagens()
     elif resp == "sair":
         quit()
-    elif resp == "tratar":
-        tratar()
     elif resp == "help":
         ajuda()
     elif resp == "scroll":
@@ -90,6 +88,9 @@ def lobby():
 
 # Finalizado
 def goProfile():
+    #Limpa lista de fotos capturadas caso ja tenha.
+    total_src.clear()
+    #Vai até o perfil
     perfil = input("nome do perfil: ")
     time.sleep(3)
     driver.get(f"https://www.instagram.com/{perfil}/")
@@ -118,7 +119,7 @@ def baixaImagens():
             time.sleep(download_speed)  # Velocidade que baixa os arquivos
             wget.download(
                 s,
-                f"/Users/fmore/Documents/Bot1/downloaded/loot{index}.jpg",  # Coloque seu path
+                f"./downloaded/loot{index}.jpg",  # path de download das fotos
             )
             index += 1
             if index >= quantidade_posts:
