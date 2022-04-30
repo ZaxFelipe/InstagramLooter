@@ -63,7 +63,7 @@ def scroll():
 
 # Finalizado porem pode ter mais functions
 def lobby():
-    print("/" * 12 + "Qual opçao deseja?" + "/" * 12)
+    print("/" * 12 + "Qual opçao deseja? " + "/" * 12)
     print("/" * 12 + "Se precisar de ajuda digita 'help'" + "/" * 12)
     resp = input(str())
     if resp == "perfil":
@@ -141,11 +141,12 @@ def baixaImagens():
 # Loga no instagram
 nome = str(input("Seu Usuario: "))
 senha = str(input("Sua Senha: "))
-options = Options()
-options.binary_location = (
-    r"S:\Programs\Browsers\Mozilla Firefox\firefox.exe"  # Coloque seu path
-)
-driver = webdriver.Firefox(options=options)  # firefox_options=
+############### Descomente a linha abaixo caso seu navegador esteja em outra pasta
+#ptions = Options()
+#options.binary_location = (r"S:\Programs\Browsers\Mozilla Firefox\firefox.exe")  # Coloque seu path
+#driver = webdriver.Firefox(options=options)  # ROda com o Firefox em Outra pasta local
+
+driver = webdriver.Firefox()  # firefox_options=
 driver.get("https://www.instagram.com")
 time.sleep(4)
 print("Iniciando Login.")
